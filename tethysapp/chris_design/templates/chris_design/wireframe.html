@@ -1,0 +1,51 @@
+{% extends "chris_design/base.html" %}
+{% load tethys_gizmos %}
+
+{% block header_buttons %}
+  <div class="header-button glyphicon-button" data-toggle="tooltip" data-placement="bottom" title="Help">
+    <a data-toggle="modal" data-target="#help-modal"><span class="glyphicon glyphicon-question-sign"></span></a>
+  </div>
+{% endblock %}
+
+{% block app_content %}
+  <h1>Wireframe</h1>
+  <h4><i>Utah Snowmelt App</i></h4>
+  <p>
+    We developed a preliminary design for the app layout, which will most likely be simplified due to
+    the difficulty of finding desired data. I have included the original text from the mockup assignment.
+  </p><br>
+
+  <h3>Main Page</h3>
+  <img src="../../../static/chris_design/images/mainpage.png" alt="mainpage.png" width="800" hspace="35"><br><br>
+  <p>
+    The principal window on the main page will be a map of the Utah area. Users will be able to manually pan and
+    zoom around the area. On the side menu, users will be able to toggle the base map, and different layers on and off.
+    Users will also be able to select differing snow data and watershed boundaries within these layers. A zoom tool
+    will be added with a drop down menu that will allow users to select a specific region, or gauge within said region.
+    A latitude and longitude search bar will also be added. Finally, the users will be able to view historical data by
+    selecting any date. In the top right corner, a link to the information window and a help window will be included.
+  </p><br>
+
+  <h3>Pop-Up</h3>
+  <img src="../../../static/chris_design/images/popup.png" alt="popup.png" width="800" hspace="35"><br><br>
+  <p>
+    When users select a specific basin or gauge, this window will appear. The graph will display either the snow-water
+    equivalent, snow depth, or snow cover of the current year and the historical median. A table will also be generated
+    with each of these three options broken down by month (from December to June).
+  </p><br>
+
+  <h3>Information Page</h3>
+  <img src="../../../static/chris_design/images/info.png" alt="info.png" width="800" hspace="35"><br><br>
+  <p>
+    This window will appear when users click on the info icon on the main page. It will describe the purpose of the
+    app, give some tips on how to use it, and provide citations.
+  </p><br>
+
+{% endblock %}
+
+{# Use the after_app_content block for modals #}
+{% block after_app_content %}
+{% endblock %}
+
+{% block app_actions %}
+{% endblock %}

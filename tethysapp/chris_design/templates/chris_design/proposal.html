@@ -1,0 +1,26 @@
+{% extends "chris_design/base.html" %}
+{% load tethys_gizmos %}
+
+{% block header_buttons %}
+  <div class="header-button glyphicon-button" data-toggle="tooltip" data-placement="bottom" title="Help">
+    <a data-toggle="modal" data-target="#help-modal"><span class="glyphicon glyphicon-question-sign"></span></a>
+  </div>
+{% endblock %}
+
+{% block app_content %}
+  <h1>Proposal</h1>
+  <h4><i>Utah Snowmelt App</i></h4>
+  <p>
+    Jake Lewis, Alex Fisher, and I (Chris Edwards) are going to make an app that shows
+    snowmelt volume over a given watershed boundary. Our proposal can be viewed below:
+  </p>
+  <embed src= "../../static/chris_design/images/proposal.pdf" width= 100% height="500">
+
+{% endblock %}
+
+{# Use the after_app_content block for modals #}
+{% block after_app_content %}
+{% endblock %}
+
+{% block app_actions %}
+{% endblock %}
